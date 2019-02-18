@@ -3,8 +3,8 @@ require 'json'
 
 class GamesController < ApplicationController
   def new
-    grid_size = rand(2..15)
-    @letters = generate_grid(grid_size)
+    @grid_size = rand(2..15)
+    @letters = generate_grid(@grid_size)
     @time_start = Time.now
   end
 
