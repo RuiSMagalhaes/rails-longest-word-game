@@ -12,6 +12,8 @@ class GamesController < ApplicationController
     end_time = Time.now
     start_time = params[:start_time].to_time
     @result = run_game(params[:word], params[:letters].split, start_time, end_time)
+    session[:score] = 0 if session[:score].nil?
+    session[:score] += @result[:score]
   end
 
   private

@@ -1,5 +1,5 @@
 <h1>Result</h1>
 
-<p><%= @result[:message]%>. Your score is <%= @result[:score] %></p>
+<p><%= @result[:message]%>. Your score is <%= @result[:score] %> and the added score is<%=session[:score]%></p>
 
 <%= link_to "Play again", new_path %>
